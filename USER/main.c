@@ -39,6 +39,14 @@
 //            pCard->data = 0;
 //            LED0=!LED0;
 //        }
+        
+//        BEEP = 1;
+//        OUT = 1;
+//        delay_ms(300);
+//        BEEP = 0;
+//        OUT = 0;
+//        delay_ms(300);
+        
         if(pcardMan->finish)
         {
             pcardMan->finish = 0;
@@ -69,8 +77,10 @@
                 {
                     //ÌÞ³ýµ±Ç°¿¨Æ¬
                     BEEP = 1;
+                    OUT = 1;
                     delay_ms(300);
                     BEEP = 0;
+                    OUT = 0;
                     //printf("get rid of current card\n");
                 }
             }
